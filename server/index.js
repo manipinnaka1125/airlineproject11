@@ -15,9 +15,7 @@ Client.connect();
 const db = Client.db('skill');
 const col = db.collection('user');
 
-app.get('/',(req,res)=>{
-  res.send("Its Working")
-})
+
 
 
 // Nodemailer configuration
@@ -31,6 +29,9 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+app.get('/',(req,res)=>{
+  res.send("Its Working")
+})
 
 app.post('/insert', async (req, res) => {
   try {
