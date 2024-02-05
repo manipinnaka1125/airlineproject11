@@ -31,9 +31,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.get('/home', (req, res) => {
-  res.send('It is the home page')
-});
 
 app.post('/insert', async (req, res) => {
   try {
