@@ -9,10 +9,16 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
 const Client = new MongoClient('mongodb+srv://admin1:admin1@cluster0.wyowjiq.mongodb.net/?retryWrites=true&w=majority');
 Client.connect();
 const db = Client.db('skill');
 const col = db.collection('user');
+
+app.get('/',(req,res)=>{
+  res.send("Its Working")
+})
+
 
 // Nodemailer configuration
 const transporter = nodemailer.createTransport({
@@ -26,7 +32,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.get('/home', (req, res) => {
-  res.send('It is the home page');
+  res.send('It is the home page')
 });
 
 app.post('/insert', async (req, res) => {
