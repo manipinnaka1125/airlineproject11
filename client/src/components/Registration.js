@@ -39,7 +39,7 @@ export default function SignUp() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
-    axios.post('http://localhost:8081/insert', {
+    axios.post('https://airlineproject11.vercel.app/insert', {
       name: data.get('name'),
       role: data.get('role'),
       email: data.get('email'),
