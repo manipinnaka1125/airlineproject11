@@ -40,7 +40,7 @@ export default function Login({store}) {
       un: data.get('un'),
       pw: data.get('pw'),
     });
-    axios.post('http://localhost:8081/check',{
+    axios.post('https://airlineproject11.vercel.app/check',{
       un:data.get('un'),
       pw: data.get('pw'),
     }).then((Response)=>{
